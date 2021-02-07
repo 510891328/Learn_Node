@@ -1,4 +1,5 @@
 const http = require('http')
+const { report } = require('process')
 
 const server = http.createServer((req, res) => {
     const url = req.url
@@ -18,7 +19,17 @@ const server = http.createServer((req, res) => {
     }
 
     if( url === '/user' && method === 'POST'){
-        console.log(res);
+        const body = []
+        req.on('data', chunk => {
+            body.push(chunk);
+        })
+
+        req.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            const message = parsedBody.split('=')[1];
+            res.write(`Hi, ${message}`)
+            return res.end();
+        })
     }
 })
 
