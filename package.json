@@ -1,0 +1,25 @@
+{
+  "name": "learn_node",
+  "version": "1.0.0",
+  "description": "This Repository for my experience with learning Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/510891328/Learn_Node.git"
+  },
+  "author": "Eddy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/510891328/Learn_Node/issues"
+  },
+  "homepage": "https://github.com/510891328/Learn_Node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
