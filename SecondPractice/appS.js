@@ -10,4 +10,4 @@ app.use('/', (req, res, next) => {
     res.send('<h1>Home Directory</h1>')
 })
 
-app.listen('8080')
+app.listen(8080)
